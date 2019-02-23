@@ -35,9 +35,9 @@ namespace PadawansTask8
                         {
                             words.Add(word);
                         }
-                        beginPosition = i;
-                        word = "";
                     }
+                    beginPosition = i;
+                    word = "";
                 }
                 else
                 {
