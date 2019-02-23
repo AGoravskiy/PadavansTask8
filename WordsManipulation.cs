@@ -37,6 +37,7 @@ namespace PadawansTask8
                             words.Add(word);
                         }
                     }
+                    isDigit = true;
                     beginPosition = i;
                     word = "";
                 }
