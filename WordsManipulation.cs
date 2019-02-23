@@ -17,6 +17,7 @@ namespace PadawansTask8
                 throw new ArgumentException();
             }
             string word = "";
+            bool isDigit = true;
             List<string> words = new List<string>();
             List<char> symbols = new List<char> { '.', ',', '!', '?', '-', ':', ';', ' ' };
             int beginPosition = 0;
@@ -24,7 +25,7 @@ namespace PadawansTask8
             {
                 if (i == text.Length || symbols.Contains(text[i]))
                 {
-                    if (word != "")
+                    if (word != "" && isDigit)
                     {
                         if (words.Contains(word))
                         {
@@ -41,6 +42,10 @@ namespace PadawansTask8
                 }
                 else
                 {
+                    if (char.IsDigit(text[i]))
+                    {
+                        isDigit = false;
+                    }
                     word += text[i];
                 }
             }
